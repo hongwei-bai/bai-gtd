@@ -16,9 +16,9 @@
         android:id="@+id/txt_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_left"
         android:text="Authenticating..."
         app:layout_constraintBottom_toTopOf="@+id/txt_summary"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 

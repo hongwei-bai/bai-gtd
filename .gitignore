@@ -68,3 +68,9 @@ fastlane/readme.md
 .idea/codeStyles/
 .idea/misc.xml
 .idea/modules.xml
+
+# app Signature & build
+keystore/
+gradle.properties
+app/debug/
+app/release/

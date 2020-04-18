@@ -22,10 +22,29 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release {
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+        }
+        debug {
+            keyAlias 'baiKeyAlias'
+            keyPassword 'jd1234'
+            storeFile file('../bai-gtd.debug.jks')
+            storePassword 'jd1234'
+        }
+    }
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            testCoverageEnabled = true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
